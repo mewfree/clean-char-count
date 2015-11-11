@@ -1,6 +1,5 @@
 var express = require('express')
-  , stylus = require('stylus')
-  , _ = require('lodash');
+  , stylus = require('stylus');
 
 var port = process.env.PORT || 3000;
 
@@ -20,10 +19,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
   res.render('index');
 });
-
-//app.get('/toast', function(req, res) {
-  //res.send('TOAST');
-//});
 
 // Start server
 var server = app.listen(port, function () {
