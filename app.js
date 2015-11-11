@@ -2,6 +2,8 @@ var express = require('express')
   , stylus = require('stylus')
   , _ = require('lodash');
 
+var port = process.env.PORT || 3000;
+
 // Express config
 var app = express();
 
@@ -24,7 +26,7 @@ app.get('/', function (req, res) {
 //});
 
 // Start server
-var server = app.listen(80, function () {
+var server = app.listen(port, function () {
 
   var host = server.address().address;
   var port = server.address().port;
