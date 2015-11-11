@@ -20,6 +20,10 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
+app.get('/:word', function (req, res) {
+  res.render('word', { word: req.params.word, length: req.params.word.length.toString() });
+});
+
 // Start server
 var server = app.listen(port, function () {
 
